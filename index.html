@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Quizzz</title>
+</head>
+
+<body>
+
+    <!-- Info Card -->
+    <div class="info_Card activeCard">
+        <div class="card-header"><span>Welcome to the Quiz</span></div>
+        <div class="card-body">
+
+            <label for="category">Category</label>
+            <br />
+            <select id="category"
+                    name="category"
+                    class="form-control"
+                    onchange="selectCategory()"></select>
+
+            <br />
+            <br />
+
+            <label for="difficulty">Difficulty</label>
+            <br />
+            <select id="difficulty"
+                    name="difficulty"
+                    class="form-control"
+                    onchange="selectDifficulty()"></select>
+
+        </div>
+
+        <div class="card-footer">
+            <button class="button-start" onclick="StartQuiz()">Start Quiz</button>
+        </div>
+    </div>
+
+    <!-- Questions Card -->
+    <div class="question_Card">
+
+
+        <header>
+            <!-- Question  number -->
+            <div class="title"></div>
+            <div class="timer">
+                <div class="timer_sec">15</div>
+            </div>
+        </header>
+        <section>
+            <!-- Question text & options -->
+            <div class="question"></div>
+            <div class="possibilities"></div>
+        </section>
+
+        <footer>
+            <button class="next_btn" onclick="nextQuestion()">Next</button>
+        </footer>
+    </div>
+
+    <!-- Result Card -->
+    <div class="result_Card">
+        
+        <label>You've completed the Quiz!</label>
+        <!-- Score  -->
+        <div class="score_text"></div>
+        <div class="buttons">
+            <button class="start" onclick="replayQuiz()">Replay Quiz</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
